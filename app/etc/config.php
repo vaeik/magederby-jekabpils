@@ -250,5 +250,106 @@ return [
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Yotpo_Yotpo' => 1
+    ],
+    'scopes' => [
+        'websites' => [
+            'admin' => [
+                'website_id' => '0',
+                'code' => 'admin',
+                'name' => 'Admin',
+                'sort_order' => '0',
+                'default_group_id' => '0',
+                'is_default' => '0'
+            ],
+            'degouges' => [
+                'website_id' => '2',
+                'code' => 'degouges',
+                'name' => 'DeGouges',
+                'sort_order' => '0',
+                'default_group_id' => '3',
+                'is_default' => '0'
+            ],
+            'debougies' => [
+                'website_id' => '3',
+                'code' => 'debougies',
+                'name' => 'DeBougies',
+                'sort_order' => '0',
+                'default_group_id' => '2',
+                'is_default' => '1'
+            ]
+        ],
+        'groups' => [
+            0 => [
+                'group_id' => '0',
+                'website_id' => '0',
+                'name' => 'Default',
+                'root_category_id' => '0',
+                'default_store_id' => '0',
+                'code' => 'default'
+            ],
+            2 => [
+                'group_id' => '2',
+                'website_id' => '3',
+                'name' => 'DeBougies',
+                'root_category_id' => '2',
+                'default_store_id' => '2',
+                'code' => 'db'
+            ],
+            3 => [
+                'group_id' => '3',
+                'website_id' => '2',
+                'name' => 'DeGouges',
+                'root_category_id' => '2',
+                'default_store_id' => '4',
+                'code' => 'dg'
+            ]
+        ],
+        'stores' => [
+            'admin' => [
+                'store_id' => '0',
+                'code' => 'admin',
+                'website_id' => '0',
+                'group_id' => '0',
+                'name' => 'Admin',
+                'sort_order' => '0',
+                'is_active' => '1'
+            ],
+            'db_uk' => [
+                'store_id' => '2',
+                'code' => 'db_uk',
+                'website_id' => '3',
+                'group_id' => '2',
+                'name' => 'UK',
+                'sort_order' => '0',
+                'is_active' => '1'
+            ],
+            'db_us' => [
+                'store_id' => '3',
+                'code' => 'db_us',
+                'website_id' => '3',
+                'group_id' => '2',
+                'name' => 'US',
+                'sort_order' => '0',
+                'is_active' => '1'
+            ],
+            'dg_uk' => [
+                'store_id' => '4',
+                'code' => 'dg_uk',
+                'website_id' => '2',
+                'group_id' => '3',
+                'name' => 'UK',
+                'sort_order' => '0',
+                'is_active' => '1'
+            ],
+            'dg_us' => [
+                'store_id' => '5',
+                'code' => 'dg_us',
+                'website_id' => '2',
+                'group_id' => '3',
+                'name' => 'US',
+                'sort_order' => '0',
+                'is_active' => '1'
+            ]
+        ]
     ]
 ];
