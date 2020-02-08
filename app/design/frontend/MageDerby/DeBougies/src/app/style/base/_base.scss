@@ -70,14 +70,6 @@
   top: 3px;
 }
 
-main, .CmsPage_isBreadcrumbsHidden {
-  margin-top: 103px;
-
-  @include mobile {
-    margin-top: 60px;
-  }
-}
-
 .Header_isHiddenOnMobile {
   @include mobile {
     pointer-events: none;
@@ -244,7 +236,7 @@ main.CmsPage {
 }
 
 .CmsPage-Wrapper {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .SliderWidget-FigureImage {
@@ -277,6 +269,7 @@ main p {
 
 .no-spacing {
   line-height: 0;
+
   figcaption {
     line-height: initial;
   }
@@ -319,7 +312,7 @@ main p {
 
 .HomepageCategories-Button.Button {
   @include mobile {
-    text-align:center;
+    text-align: center;
   }
 }
 
@@ -341,7 +334,7 @@ main p {
   }
 }
 
-.Slider-Wrapper>* {
+.Slider-Wrapper > * {
   line-height: 0;
 }
 
@@ -361,7 +354,7 @@ main p {
   }
 }
 
-.Header.Header_name_default  {
+.Header.Header_name_default {
   border-bottom: #97ccec solid 3px;
 }
 
@@ -373,4 +366,12 @@ main p {
 
 .SliderWidget-FigureImage {
   border-bottom: $default-primary-base-color solid 3px;
+}
+
+.Breadcrumbs {
+  margin-top: 0;
+}
+
+main.CategoryPage {
+  margin-top:10px;
 }
