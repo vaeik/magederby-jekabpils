@@ -1,0 +1,56 @@
+.CategoryDetails {
+  background: $black2;
+  border-radius: 10px;
+  color: $white;
+
+  p {
+    display: none;
+  }
+}
+
+main.CategoryPage {
+  margin-top: 0;
+}
+
+.ProductCard-Picture {
+  padding-bottom: 150%;
+  box-shadow: 5px 5px 18px $default-shadow-color;
+}
+
+.CategoryDetails-Description {
+  height: auto;
+}
+
+main.ProductPage {
+  margin: 0;
+}
+
+.ProductPage {
+  section.ProductReviews {
+    background: $default-primary-base-color;
+  }
+}
+
+.ProductPage-Wrapper {
+  padding-bottom: calc(40vh - var(--header-height) - var(--footer-height) - var(--breadcrumbs-height));
+}
+
+.Button {
+  &:not([disabled]) {
+    &:focus {
+      color: $white;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.Field-Select {
+  border-color: $default-primary-base-color;
+}
+
+.Field-SelectOptions {
+  position: relative;
+}
