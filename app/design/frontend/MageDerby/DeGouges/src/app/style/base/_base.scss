@@ -416,3 +416,11 @@ main p {
     }
   }
 }
+
+.Button:not([disabled]):focus, .Button:not([disabled]):hover {
+  color: $black;
+}
+
+.Button:hover {
+  color: $black;
+}
