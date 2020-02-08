@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magederby_product_limit" translate="label" sortOrder="10">
+            <label>Product Limit</label>
+        </tab>
+        <section id="magederby_product_limit_settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Limit Configuration</label>
+            <tab>magederby_product_limit</tab>
+            <resource>MageDerby_ProductLimit::magederby_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="amount_limit" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Type limit</label>
+                    <comment>Specify the limit for product type purchasing per customer.</comment>
+                </field>
+                <field id="time_limit" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Limit Time</label>
+                    <comment>Specify the time frame for the limit(days).</comment>
+                </field>
+                <field id="bypass_group" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Customer group bypass</label>
+                    <source_model>MageDerby\ProductLimit\Model\Config\Source\Group\Select</source_model>
+                    <comment>Specify the customer group which can bypass the limit.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

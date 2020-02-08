@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <magederby_product_limit_settings>
+            <general>
+                <enabled>1</enabled>
+                <amount_limit>5</amount_limit>
+                <time_limit>365</time_limit>
+                <bypass_group>0</bypass_group>
+            </general>
+        </magederby_product_limit_settings>
+    </default>
+</config>
