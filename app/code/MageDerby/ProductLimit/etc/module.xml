@@ -3,6 +3,7 @@
     <module name="MageDerby_ProductLimit" >
         <sequence>
             <module name="Magento_Checkout"/>
+            <module name="ScandiPWA_QuoteGraphQl"/>
         </sequence>
     </module>
 </config>

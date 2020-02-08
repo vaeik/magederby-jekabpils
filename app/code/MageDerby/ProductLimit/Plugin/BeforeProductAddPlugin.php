@@ -1,4 +1,5 @@
 <?php
+
 namespace MageDerby\ProductLimit\Plugin;
 
 use DateTime;
@@ -15,6 +16,7 @@ use Magento\Store\Model\ScopeInterface;
 
 /**
  * Class BeforeProductAdd
+ *
  * @package MageDerby\ProductLimit\Plugin
  */
 class BeforeProductAddPlugin
@@ -46,11 +48,11 @@ class BeforeProductAddPlugin
 
     /**
      * BeforeProductAddPlugin constructor.
-     * @param Session $customerSession
-     * @param ResourceConnection $resourceConnection
-     * @param ScopeConfigInterface $scopeConfig
-     * @param Url $customerUrl
-     * @param CheckoutSession $checkoutSession
+     *
+     * @param Session                    $customerSession
+     * @param ResourceConnection         $resourceConnection
+     * @param ScopeConfigInterface       $scopeConfig
+     * @param Url                        $customerUrl
      * @param ProductRepositoryInterface $productRepository
      */
     public function __construct(
@@ -69,7 +71,8 @@ class BeforeProductAddPlugin
 
     /**
      * @param Quote $subject
-     * @param $product
+     * @param       $product
+     *
      * @throws LocalizedException
      */
     public function beforeAddProduct(
@@ -83,7 +86,7 @@ class BeforeProductAddPlugin
         );
 
         if ($enabled) {
-            $customerId = $this->customerSession->getCustomer()->getId();
+            $customerId = $subject->getCustomerId();
 
             if (!$customerId) {
                 throw new LocalizedException(
@@ -93,9 +96,10 @@ class BeforeProductAddPlugin
 
             // Define scent.
             $this->scent = $product->getScent();
+            $amount = 0;
 
             // Define current amount
-            If($requestInfo) {
+            if ($requestInfo) {
                 $amount = $requestInfo->getQty();
             }
 
@@ -105,14 +109,11 @@ class BeforeProductAddPlugin
             }
 
             $amount += $this->matchCartItems($subject);
-
-            $customerGroup = $this->customerSession->getCustomer()->getGroupId();
-
+            $customerGroup = $subject->getCustomer()->getGroupId();
             $amountLimit = $this->scopeConfig->getValue(
                 'magederby_product_limit_settings/general/amount_limit',
                 ScopeInterface::SCOPE_STORE
             );
-
             $bypassGroup = $this->scopeConfig->getValue(
                 'magederby_product_limit_settings/general/bypass_group',
                 ScopeInterface::SCOPE_STORE
@@ -128,6 +129,7 @@ class BeforeProductAddPlugin
 
     /**
      * @param $customerId
+     *
      * @return int
      * @throws Exception
      */
@@ -161,6 +163,7 @@ class BeforeProductAddPlugin
 
     /**
      * @param $cartItems
+     *
      * @return int
      * @throws NoSuchEntityException
      */
@@ -168,12 +171,11 @@ class BeforeProductAddPlugin
     {
         $match = 0;
 
-        foreach ($cartItems->getAllItems() as $key => $value) {
-            $cartProduct = $this->productRepository->getById($value->getProductId());
-            $attribute = $cartProduct->getScent();
+        foreach ($cartItems->getAllItems() as $item) {
+            $attribute = $item->getProduct()->getScent();
 
             if ($attribute && $attribute === $this->scent) {
-                $match += $value->getQty();
+                $match += $item->getQty();
             }
         }
 

@@ -1,0 +1,16 @@
+
+# ScandiPWA - Progressive Web App for Magento
+#
+# Copyright © Scandiweb, Inc. All rights reserved.
+# See LICENSE for license details.
+#
+# @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+# @package scandipwa/quote-graphql
+# @link https://github.com/scandipwa/quote-graphql
+#
+# Copyright © Magento, Inc. All rights reserved.
+# See COPYING.txt for license details.
+
+type Mutation {
+    saveCartItem(cartItem: CartItemInput!, guestCartId: String): Query @resolver(class:"\\MageDerby\\ProductLimit\\Model\\Resolver\\SaveCartItem")
+}
