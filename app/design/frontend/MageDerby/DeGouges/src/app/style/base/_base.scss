@@ -9,12 +9,12 @@
 }
 
 .Slider .Button {
-  background-color: #dcdcdc;
+  background-color: $alto;
   border: 1px $black solid;
 }
 
 .SearchField-Input {
-  background-color: white;
+  background-color: $white;
 }
 
 .Image.Image_imageStatus_1.Logo {
@@ -220,7 +220,7 @@ main, .CmsPage_isBreadcrumbsHidden {
 }
 
 .Field-Select {
-  border-color: #404040;
+  border-color: $gray;
 }
 
 .home-candle {
@@ -242,15 +242,21 @@ main.CmsPage {
   opacity: 1;
 }
 
+.homepage-slider h1 {
+  margin: 0;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 200;
+}
+
 .Footer {
   display: flex;
   padding: 0;
-  border-top: #B9933B solid 3px;
+  border-top: $default-primary-base-color solid 3px;
 }
 
 .Header-LogoWrapper {
   position: relative;
-  padding: 10px;
+  margin: 10px auto;
 }
 
 main p {
@@ -264,19 +270,19 @@ main p {
 }
 
 .HomepageCategories a {
-  border-top: #B9933B solid 3px;
+  border-top: $default-primary-base-color solid 3px;
 }
 
 .HomepageCategories a:first-child {
-  border-right: #B9933B solid 3px;
+  border-right: $default-primary-base-color solid 3px;
 }
 
 .HomepageCategories a:last-child {
-  border-left: #B9933B solid 3px;
+  border-left: $default-primary-base-color solid 3px;
 }
 
 .Field-SelectWrapper::after {
-  border-color: #B9933B;
+  border-color: $default-primary-base-color;
 }
 
 .no-spacing {
@@ -303,4 +309,13 @@ main p {
   .homepage-slider .SliderWidget-Figcaption {
     padding-top: 0;
   }
+}
+
+.Breadcrumbs {
+  margin: 0;
+  background: $default-primary-base-color;
+}
+
+.Breadcrumbs-Link {
+  color: $white;
 }
