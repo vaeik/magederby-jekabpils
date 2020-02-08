@@ -93,7 +93,7 @@ main, .CmsPage_isBreadcrumbsHidden {
   width: 35px;
   pointer-events: all;
   overflow: visible;
-  z-index: 50px;
+  z-index: 50;
 }
 
 .Header-Button_type_account::before {
@@ -415,4 +415,12 @@ main p {
       }
     }
   }
+}
+
+.Button:not([disabled]):focus, .Button:not([disabled]):hover {
+  color: $black;
+}
+
+.Button:hover {
+  color: $black;
 }
