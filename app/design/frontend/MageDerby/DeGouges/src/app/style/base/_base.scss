@@ -192,3 +192,115 @@ main, .CmsPage_isBreadcrumbsHidden {
 .Header-Button.Header-Button_type_edit.Header-Button_isVisible {
   display: none;
 }
+
+.Header {
+  position: relative;
+
+  .Header-Nav {
+    height: auto;
+    padding: 0 30px;
+  }
+
+  .Field-Select {
+    background: transparent;
+    color: gold;
+    border-radius: 5px;
+  }
+
+  .StoreSwitcher {
+    position: relative;
+    padding: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .Field {
+    margin: 0;
+  }
+}
+
+.Field-Select {
+  border-color: #404040;
+}
+
+.home-candle {
+  color: #fff;
+  font-size: 14pt;
+  margin-bottom: 20px;
+}
+
+main.CmsPage {
+  margin: 0;
+}
+
+.CmsPage-Wrapper {
+  margin: 0;
+}
+
+.SliderWidget-FigureImage {
+  //min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--breadcrumbs-height));
+  opacity: 1;
+}
+
+.Footer {
+  display: flex;
+  padding: 0;
+  border-top: #B9933B solid 3px;
+}
+
+.Header-LogoWrapper {
+  position: relative;
+  padding: 10px;
+}
+
+main p {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .HomepageCategories {
+    grid-gap: 0;
+  }
+}
+
+.HomepageCategories a {
+  border-top: #B9933B solid 3px;
+}
+
+.HomepageCategories a:first-child {
+  border-right: #B9933B solid 3px;
+}
+
+.HomepageCategories a:last-child {
+  border-left: #B9933B solid 3px;
+}
+
+.Field-SelectWrapper::after {
+  border-color: #B9933B;
+}
+
+.no-spacing {
+  line-height: 0;
+
+  figcaption {
+    line-height: initial;
+  }
+}
+
+.Field-SelectWrapper {
+  .Field-Select_isExpanded {
+    border-color: var(--input-color);
+  }
+}
+
+@media (min-width: 768px) {
+  .HomepageCategories-Figure {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .homepage-slider .SliderWidget-Figcaption {
+    padding-top: 0;
+  }
+}
