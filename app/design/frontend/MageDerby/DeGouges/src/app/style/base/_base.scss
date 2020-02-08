@@ -93,6 +93,7 @@ main, .CmsPage_isBreadcrumbsHidden {
   width: 35px;
   pointer-events: all;
   overflow: visible;
+  z-index: 50px;
 }
 
 .Header-Button_type_account::before {
