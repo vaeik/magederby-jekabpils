@@ -33,6 +33,18 @@ HTML;
     exit(1);
 }
 
+/**
+ * Fast hack for multiple store w/o subdomains
+ */
+if (isset($_COOKIE['MAGE_RUN_CODE_FORCE'])) {
+    $params['MAGE_RUN_CODE'] = $_COOKIE['MAGE_RUN_CODE_FORCE'];
+}
+if (isset($_GET['code'])) {
+    $code = htmlentities(strip_tags($_GET['code']));
+    $params['MAGE_RUN_CODE'] = $code;
+    setcookie('MAGE_RUN_CODE_FORCE', $code, time() + (86400 * 30), "/");
+}
+
 $bootstrap = \Magento\Framework\App\Bootstrap::create(BP, $_SERVER);
 /** @var \Magento\Framework\App\Http $app */
 $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
