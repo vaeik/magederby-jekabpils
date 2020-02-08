@@ -51,6 +51,8 @@ main.ProductPage {
   border-color: $default-primary-base-color;
 }
 
-.Field-SelectOptions {
-  position: relative;
+.ProductActions-AttributesWrapper {
+  .Field-SelectOptions {
+    position: relative;
+  }
 }
