@@ -269,16 +269,18 @@ main p {
   }
 }
 
-.HomepageCategories a {
-  border-top: $default-primary-base-color solid 3px;
-}
+.HomepageCategories {
+  .HomepageCategories-Figure {
+    border-top: $default-primary-base-color solid 3px;
 
-.HomepageCategories a:first-child {
-  border-right: $default-primary-base-color solid 3px;
-}
+    &:first-child {
+      border-right: $default-primary-base-color solid 3px;
+    }
 
-.HomepageCategories a:last-child {
-  border-left: $default-primary-base-color solid 3px;
+    &:last-child {
+      border-left: $default-primary-base-color solid 3px;
+    }
+  }
 }
 
 .Field-SelectWrapper::after {
