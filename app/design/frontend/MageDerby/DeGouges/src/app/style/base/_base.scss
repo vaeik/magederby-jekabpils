@@ -282,42 +282,42 @@ main p {
     }
   }
 }
-  .Field-SelectWrapper::after {
-    border-color: $default-primary-base-color;
-  }
 
-  .no-spacing {
-    line-height: 0;
+.Field-SelectWrapper::after {
+  border-color: $default-primary-base-color;
+}
 
-    figcaption {
-      line-height: initial;
-    }
-  }
+.no-spacing {
+  line-height: 0;
 
-  .Field-SelectWrapper {
-    .Field-Select_isExpanded {
-      border-color: var(--input-color);
-    }
+  figcaption {
+    line-height: initial;
   }
+}
 
-  @media (min-width: 768px) {
-    .HomepageCategories-Figure {
-      margin-top: 0;
-    }
+.Field-SelectWrapper {
+  .Field-Select_isExpanded {
+    border-color: var(--input-color);
   }
+}
 
-  @media (min-width: 1024px) {
-    .homepage-slider .SliderWidget-Figcaption {
-      padding-top: 0;
-    }
+@media (min-width: 768px) {
+  .HomepageCategories-Figure {
+    margin-top: 0;
   }
+}
 
-  .Breadcrumbs {
-    margin: 0;
-    background: $default-primary-base-color;
+@media (min-width: 1024px) {
+  .homepage-slider .SliderWidget-Figcaption {
+    padding-top: 0;
   }
+}
 
-  .Breadcrumbs-Link {
-    color: $white;
-  }
+.Breadcrumbs {
+  margin: 0;
+  background: $default-primary-base-color;
+}
+
+.Breadcrumbs-Link {
+  color: $white;
 }
