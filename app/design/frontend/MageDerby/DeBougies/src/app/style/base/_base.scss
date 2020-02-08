@@ -324,3 +324,26 @@ main p {
 .CmsPage-Wrapper.CmsPage-Wrapper_page_width_full {
   margin: 0;
 }
+
+
+.HomepageCategories-Button.Button {
+  @include mobile {
+    text-align:center;
+  }
+}
+
+.social-icon-container {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+  }
+
+  li {
+    displaY: block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+}
