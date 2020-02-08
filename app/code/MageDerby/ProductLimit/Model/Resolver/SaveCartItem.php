@@ -344,8 +344,8 @@ class SaveCartItem implements ResolverInterface
             $customerId = $quote->getCustomer()->getId();
 
             if (!$customerId) {
-                throw new LocalizedException(
-                    __('You must be logged in to purchase this product.')
+                throw new GraphQlNoSuchEntityException(
+                    new Phrase(__('You must be logged in to purchase this product.'))
                 );
             }
 

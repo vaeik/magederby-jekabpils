@@ -43,8 +43,7 @@
   }
   @include xs-mobile {
     height: 60px;
-    width: 250px;
-    padding-left: 162px;
+    padding: 0;
   }
 }
 
@@ -93,6 +92,7 @@ main, .CmsPage_isBreadcrumbsHidden {
   width: 35px;
   pointer-events: all;
   overflow: visible;
+  z-index: 50;
 }
 
 .Header-Button_type_account::before {
@@ -254,7 +254,11 @@ main.CmsPage {
 
 .Header-LogoWrapper {
   position: relative;
-  padding: 10px;
+  padding-right: 184px;
+
+  @include mobile {
+    padding-right: 116px;
+  }
 }
 
 main p {
@@ -271,21 +275,8 @@ main p {
   border-top: $default-primary-base-color solid 3px;
 }
 
-.HomepageCategories a:first-child {
-  border-right: $default-primary-base-color solid 3px;
-}
-
-.HomepageCategories a:last-child {
-  border-left: $default-primary-base-color solid 3px;
-}
-
-.Field-SelectWrapper::after {
-  border-color: $default-primary-base-color;
-}
-
 .no-spacing {
   line-height: 0;
-
   figcaption {
     line-height: initial;
   }
@@ -333,6 +324,8 @@ main p {
 }
 
 .social-icon-container {
+  border-top: $default-primary-base-color solid 3px;
+
   ul {
     display: flex;
     justify-content: space-around;
@@ -346,4 +339,38 @@ main p {
     padding: 0;
     margin: 0;
   }
+}
+
+.Slider-Wrapper>* {
+  line-height: 0;
+}
+
+.HomepageCategories .HomepageCategories-Figure {
+  border-right: $default-primary-base-color solid 2px;
+
+  @include mobile {
+    border: none;
+  }
+}
+
+.HomepageCategories .HomepageCategories-Figure:last-child {
+  border-right: $default-primary-base-color solid 2px;
+
+  @include mobile {
+    border: none;
+  }
+}
+
+.Header.Header_name_default  {
+  border-bottom: #97ccec solid 3px;
+}
+
+.Header-Nav {
+  max-width: 1400px;
+  margin: auto;
+  border-bottom: 0;
+}
+
+.SliderWidget-FigureImage {
+  border-bottom: $default-primary-base-color solid 3px;
 }
