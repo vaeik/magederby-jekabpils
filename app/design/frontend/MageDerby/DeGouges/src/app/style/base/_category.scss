@@ -69,6 +69,10 @@ main.ProductPage {
   }
 }
 
-.Header .Field-Select {
-  color: $black;
+.Header {
+  .Field-Select {
+    option {
+      color: $black;
+    }
+  }
 }

@@ -155,6 +155,7 @@ main, .CmsPage_isBreadcrumbsHidden {
   left: 10px;
   position: absolute;
   top: 8px;
+
   @include mobile {
     border: 0;
     z-index: 100;
@@ -203,11 +204,12 @@ main, .CmsPage_isBreadcrumbsHidden {
     height: auto;
     max-width: 1400px;
     margin: 0 auto;
+    border-bottom: 0;
   }
 
   .Field-Select {
     background: transparent;
-    color: gold;
+    color: $default-primary-base-color;
     border-radius: 5px;
   }
 
@@ -330,6 +332,8 @@ main p {
 @media (max-width: 767px) {
   .Header-LogoWrapper {
     opacity: 1;
+    overflow: initial;
+    max-width: initial;
   }
 
   .Header-Button_type_back {
@@ -362,5 +366,53 @@ main p {
     height: 50px;
     padding: 0;
     margin: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .Header-LogoWrapper {
+    height: 60px;
+    width: auto;
+    padding-left: 50%;
+  }
+
+  .Logo-Placeholder {
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .NavigationTabs {
+    background: $black;
+    border-top: 3px solid $default-primary-base-color;
+  }
+
+  .Header {
+    position: fixed;
+  }
+
+  .Header-LogoWrapper {
+    margin: 10px 0;
+  }
+
+  .Header-Nav {
+    .StoreSwitcher {
+      margin-right: auto;
+    }
+  }
+
+  .HomepageCategories {
+    .HomepageCategories-Figure {
+      margin: 0;
+      border-bottom: 0;
+
+      &:first-child {
+        border-right: 0;
+      }
+
+      &:last-child {
+        border-left: 0;
+      }
+    }
   }
 }
