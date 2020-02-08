@@ -31,15 +31,20 @@
   height: 100px;
   width: 140px;
   top: 0;
+  pointer-events: all;
 }
 
 .Header-LogoWrapper {
   height: 100px;
   width: 140px;
-
   @include mobile {
     height: 60px;
     width: 80px;
+  }
+  @include xs-mobile {
+    height: 60px;
+    width: 250px;
+    padding-left: 162px;
   }
 }
 
@@ -132,7 +137,12 @@ main, .CmsPage_isBreadcrumbsHidden {
 
 .Footer {
   background-color: $black;
-  color: $white;
+  color: $default-primary-light-color;
+  display: block;
+  padding-top: 30px;
+  @include mobile {
+    padding-top: 20px;
+  }
 }
 
 .ContentWrapper.Checkout-Wrapper {
@@ -140,12 +150,13 @@ main, .CmsPage_isBreadcrumbsHidden {
 }
 
 .StoreSwitcher {
-  padding: 5px;
+  padding: 5px 5px 36px;
   left: 10px;
   position: absolute;
   top: 8px;
   @include mobile {
     border: 0;
+    z-index: 100;
   }
 }
 
@@ -153,4 +164,31 @@ main, .CmsPage_isBreadcrumbsHidden {
   @include mobile {
     padding: 5px 35px 5px 5px;
   }
+}
+
+.Header_isHiddenOnMobile .Field {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.Overlay:not(.Overlay_isStatic) {
+  @include mobile {
+    background-color: $white;
+  }
+}
+
+.Button_isHollow {
+  @include mobile {
+    min-width: 134px;
+  }
+}
+
+.Header-Title.Header-Title_isVisible {
+  @include mobile {
+    display: none;
+  }
+}
+
+.Header-Button.Header-Button_type_edit.Header-Button_isVisible {
+  display: none;
 }
