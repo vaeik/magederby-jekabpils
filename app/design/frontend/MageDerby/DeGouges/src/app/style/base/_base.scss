@@ -196,10 +196,13 @@ main, .CmsPage_isBreadcrumbsHidden {
 
 .Header {
   position: relative;
+  background-color: $black;
+  border-bottom: 3px solid $default-primary-base-color;
 
   .Header-Nav {
     height: auto;
-    padding: 0 30px;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .Field-Select {
@@ -231,11 +234,11 @@ main, .CmsPage_isBreadcrumbsHidden {
 }
 
 main.CmsPage {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .CmsPage-Wrapper {
-  margin: 0;
+  margin: 0 auto;
 }
 
 .SliderWidget-FigureImage {
@@ -273,6 +276,7 @@ main p {
 .HomepageCategories {
   .HomepageCategories-Figure {
     border-top: $default-primary-base-color solid 3px;
+    border-bottom: $default-primary-base-color solid 3px;
 
     &:first-child {
       border-right: $default-primary-base-color solid 3px;
@@ -288,7 +292,7 @@ main p {
   border-color: $default-primary-base-color;
 }
 
-.no-spacing {
+.SliderWidget {
   line-height: 0;
 
   figcaption {
@@ -321,6 +325,22 @@ main p {
 
 .Breadcrumbs-Link {
   color: $white;
+}
+
+@media (max-width: 767px) {
+  .Header-LogoWrapper {
+    opacity: 1;
+  }
+
+  .Header-Button_type_back {
+    display: none;
+  }
+
+  .Image.Image_imageStatus_1.Logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .HomepageCategories-Button.Button {
