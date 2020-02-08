@@ -56,3 +56,19 @@ main.ProductPage {
     position: relative;
   }
 }
+
+@media (max-width: 767px) {
+  .CategoryPage-Miscellaneous {
+    position: relative;
+    top: 0;
+    background: $default-primary-base-color;
+  }
+
+  .CategoryPage-ProductListWrapper {
+    padding: 30px;
+  }
+}
+
+.Header .Field-Select {
+  color: $black;
+}
