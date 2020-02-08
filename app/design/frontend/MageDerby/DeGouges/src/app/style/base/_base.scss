@@ -1,0 +1,156 @@
+.homepage-slider h1 {
+  color: $default-primary-light-color;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $black;
+}
+
+.SliderWidget-FigureImage {
+  opacity: 0.7;
+}
+
+.Slider .Button {
+  background-color: #dcdcdc;
+  border: 1px $black solid;
+}
+
+.SearchField-Input {
+  background-color: white;
+}
+
+.Image.Image_imageStatus_1.Logo {
+  height: 100px;
+  width: 140px;
+
+  @include mobile {
+    height: 60px;
+    width: 80px;
+  }
+}
+
+.Header-LogoWrapper_isVisible {
+  height: 100px;
+  width: 140px;
+  top: 0;
+}
+
+.Header-LogoWrapper {
+  height: 100px;
+  width: 140px;
+
+  @include mobile {
+    height: 60px;
+    width: 80px;
+  }
+}
+
+.Header-Nav {
+  height: 103px;
+  background-color: $black;
+  border-bottom: $default-primary-base-color solid 3px;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include mobile {
+    height: 60px;
+  }
+}
+
+.SearchField-Wrapper {
+  border: $default-primary-base-color solid 3px;
+}
+
+.SearchField-Placeholder::before {
+  top: 3px;
+}
+
+main, .CmsPage_isBreadcrumbsHidden {
+  margin-top: 103px;
+
+  @include mobile {
+    margin-top: 60px;
+  }
+}
+
+.Header_isHiddenOnMobile {
+  @include mobile {
+    pointer-events: none;
+    opacity: 1;
+  }
+}
+
+.Header-Button_type_account,
+.Header-Button_type_minicart {
+  opacity: 1;
+  padding: 7.5px;
+  width: 35px;
+  pointer-events: all;
+  overflow: visible;
+}
+
+.Header-Button_type_account::before {
+  box-shadow: 0 calc(13px + var(--header-icon-stroke-width)) 0 3px $default-primary-base-color, 0 calc(13px + var(--header-icon-stroke-width)) 0 calc(var(--header-icon-stroke-width) + 3px) $default-primary-base-color;
+  border: var(--header-icon-stroke-width) solid $default-primary-base-color;
+}
+
+.Header-Button_type_account::after {
+  background-color: $black;
+}
+
+.Header-Button_type_minicart::before {
+  border: var(--header-icon-stroke-width) solid $default-primary-base-color;
+}
+
+.Header-Button_type_minicart::after {
+  border-top: var(--header-icon-stroke-width) solid $default-primary-base-color;
+  border-left: var(--header-icon-stroke-width) solid $default-primary-base-color;
+  border-right: var(--header-icon-stroke-width) solid $default-primary-base-color;
+}
+
+.Header-MinicartItemCount {
+  color: $black;
+}
+
+.Button:not([disabled]):hover, .Button:not([disabled]):focus {
+  color: $default-primary-base-color;
+}
+
+.CartItem-Delete::before {
+  border-left: 1px solid $default-primary-base-color;
+  border-right: 1px solid $default-primary-base-color;
+  border-bottom: 1px solid $default-primary-base-color;
+}
+
+.CartItem-Delete::after {
+  border-left: 1px solid $default-primary-base-color;
+  border-right: 1px solid $default-primary-base-color;
+  border-top: 1px solid $default-primary-base-color;
+  box-shadow: 6px 2px 0 -1px $default-primary-base-color, -6px 2px 0 -1px $default-primary-base-color, -2px 2px 0 -1px $default-primary-base-color, 2px 2px 0 -1px $default-primary-base-color;
+}
+
+.Footer {
+  background-color: $black;
+  color: $white;
+}
+
+.ContentWrapper.Checkout-Wrapper {
+  margin-bottom: 20px;
+}
+
+.StoreSwitcher {
+  padding: 5px;
+  left: 10px;
+  position: absolute;
+  top: 8px;
+  @include mobile {
+    border: 0;
+  }
+}
+
+.StoreSwitcher select {
+  @include mobile {
+    padding: 5px 35px 5px 5px;
+  }
+}
